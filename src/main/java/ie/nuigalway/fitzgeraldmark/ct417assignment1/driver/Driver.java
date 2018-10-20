@@ -90,5 +90,36 @@ public class Driver {
         for(Module m:csitModules){
             System.out.println(m.getId() + " " + m.getName());
         }
+        
+        ArrayList<Module> modules = new ArrayList<Module>();
+        modules.add(softEng);
+        modules.add(ml);
+        modules.add(eceFYP);
+        modules.add(tele);
+        modules.add(dsp);
+        modules.add(soc);
+        modules.add(csitFYP);
+        modules.add(aps);
+        modules.add(graph);
+        modules.add(geom);
+        
+        ArrayList<Student> moduleStudents;
+        ArrayList<Course> moduleCourses;
+        //create a loop to go through all created modules
+        for(Module m:modules){
+            //store values returned in arraylist
+            moduleStudents = m.getStudents();
+            moduleCourses = m.getCourses();
+            System.out.println("\n********** Registered students for module " + m.getId() + " " + m.getName() + " **********");
+            //print out every student assigned to that module
+            for(Student s : moduleStudents) {
+                System.out.println(s.getUsername());
+            }
+            System.out.println("\n********** Registered courses for module " + m.getId() + " " + m.getName() + " **********");
+            //print out every student assigned to that module
+            for(Course c : moduleCourses) {
+                System.out.println(c.getName());
+            }
+        }
     }
 }
