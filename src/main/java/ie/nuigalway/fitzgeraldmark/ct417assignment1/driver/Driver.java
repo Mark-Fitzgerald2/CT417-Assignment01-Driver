@@ -16,9 +16,11 @@ import org.joda.time.format.DateTimeFormat;
  */
 public class Driver {
     public static void main(String[] args){
+        //create courses
         Course ece = new Course("Electronic and Computer Engineering (ECE)", DateTime.parse("10/09/2018", DateTimeFormat.forPattern("dd/MM/yyyy")), DateTime.parse("10/05/2019", DateTimeFormat.forPattern("dd/MM/yyyy")));
         Course csit = new Course("Computer Science and Information Technology (CS&IT)", DateTime.parse("10/09/2018", DateTimeFormat.forPattern("dd/MM/yyyy")), DateTime.parse("10/05/2019", DateTimeFormat.forPattern("dd/MM/yyyy")));
         
+        //create modules
         Module softEng = new Module("Software Engineering III", "CT417");
         Module ml = new Module("Machine Learning and Data Mining", "CT475");    
         Module eceFYP = new Module("Electronic and Computer Engineering Project", "CT434");
@@ -30,12 +32,14 @@ public class Driver {
         Module graph = new Module("Graphics & Image Processing", "CT404");
         Module geom = new Module("Euclidean & Non-Euclidean Geometry", "MA3101");
         
+        //add ece modules to the course
         ece.addModule(softEng);
         ece.addModule(ml);
         ece.addModule(eceFYP);
         ece.addModule(tele);
         ece.addModule(dsp);
         ece.addModule(soc);
+        //add csit modules to the course
         csit.addModule(softEng);
         csit.addModule(ml);
         csit.addModule(csitFYP);
@@ -43,6 +47,7 @@ public class Driver {
         csit.addModule(graph);
         csit.addModule(geom);
         
+        //create students
         Student rachel = new Student("Rachel Green", 21, DateTime.parse("25/05/1997", DateTimeFormat.forPattern("dd/MM/yyyy")), "154789");
         Student phoebe = new Student("Phoebe Buffay", 20, DateTime.parse("17/12/1997", DateTimeFormat.forPattern("dd/MM/yyyy")), "132654");
         Student joey = new Student("Joey Tribbiani", 25, DateTime.parse("12/01/1993", DateTimeFormat.forPattern("dd/MM/yyyy")), "198745");
@@ -54,11 +59,13 @@ public class Driver {
         Student paul = new Student("Paul Stevens", 20, DateTime.parse("01/01/1998", DateTimeFormat.forPattern("dd/MM/yyyy")), "785435");
         Student melissa = new Student("Melissa Warburton", 23, DateTime.parse("18/07/1995", DateTimeFormat.forPattern("dd/MM/yyyy")), "455164");
         
+        //add ece students to the course
         ece.addStudent(rachel);
         ece.addStudent(phoebe);
         ece.addStudent(joey);
         ece.addStudent(monica);
         ece.addStudent(chandler);
+        //add csit students to the course
         csit.addStudent(ross);
         csit.addStudent(janice);
         csit.addStudent(ben);
@@ -67,31 +74,44 @@ public class Driver {
         
         //print students registered for ECE
         System.out.println("*********** Registered ECE Students **********");
+        //create an arraylist of returned students for ece
         ArrayList<Student> eceStudents = ece.getStudents();
-        for(Student s:eceStudents){
+        //loop through array list
+        eceStudents.forEach((s) -> {
+            //print student username
             System.out.println(s.getUsername());
-        }
+        });
         //print out modules registerd for ECE
         System.out.println("\n*********** Registered ECE Modules **********");
+        //create an arraylist of returned modules for ece
         ArrayList<Module> eceModules = ece.getModules();
-        for(Module m:eceModules){
+        //loop through array list
+        eceModules.forEach((m) -> {
+            //print module Id and Name
             System.out.println(m.getId() + " " + m.getName());
-        }
+        });
         
         //print students registered for CS&IT
         System.out.println("\n*********** Registered CSIT Students **********");
+        //create an arraylist of returned students for csit
         ArrayList<Student> csitStudents = csit.getStudents();
-        for(Student s:csitStudents){
+        //loop through array list
+        csitStudents.forEach((s) -> {
+            //print student username
             System.out.println(s.getUsername());
-        }
+        });
         //print out modules registerd for ECE
         System.out.println("\n*********** Registered ECE Modules **********");
+        //create an arraylist of returned modules for csit
         ArrayList<Module> csitModules = csit.getModules();
-        for(Module m:csitModules){
+        //loop through array list
+        csitModules.forEach((m) -> {
+            //print module Id and Name
             System.out.println(m.getId() + " " + m.getName());
-        }
+        });
         
-        ArrayList<Module> modules = new ArrayList<Module>();
+        //store all modules in an arraylist so we can loop through them
+        ArrayList<Module> modules = new ArrayList<>();
         modules.add(softEng);
         modules.add(ml);
         modules.add(eceFYP);
@@ -122,7 +142,8 @@ public class Driver {
             }
         }
         
-        ArrayList<Student> students = new ArrayList<Student>();
+        //store all students in an arraylist so we can loop through them
+        ArrayList<Student> students = new ArrayList<>();
         students.add(rachel);
         students.add(phoebe);
         students.add(joey);
