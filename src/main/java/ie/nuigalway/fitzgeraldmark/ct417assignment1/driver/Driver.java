@@ -121,5 +121,36 @@ public class Driver {
                 System.out.println(c.getName());
             }
         }
+        
+        ArrayList<Student> students = new ArrayList<Student>();
+        students.add(rachel);
+        students.add(phoebe);
+        students.add(joey);
+        students.add(monica);
+        students.add(chandler);
+        students.add(ross);
+        students.add(janice);
+        students.add(ben);
+        students.add(paul);
+        students.add(melissa);
+        
+        ArrayList<Module> studentModules;
+        ArrayList<Course> studentCourses;
+        //create a loop to go through all created modules
+        for(Student s:students){
+            //store values returned in arraylist
+            studentModules = s.getModules();
+            studentCourses = s.getCourses();
+            System.out.println("\n********** Registered modules for student " + s.getName() + " **********");
+            //print out every student assigned to that module
+            for(Module m : studentModules) {
+                System.out.println(m.getId() + " " + m.getName());
+            }
+            System.out.println("\n********** Registered courses for student " + s.getName() + " **********");
+            //print out every student assigned to that module
+            for(Course c : studentCourses) {
+                System.out.println(c.getName());
+            }
+        }
     }
 }
