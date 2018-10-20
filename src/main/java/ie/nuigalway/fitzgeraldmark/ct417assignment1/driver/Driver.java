@@ -75,7 +75,7 @@ public class Driver {
         System.out.println("\n*********** Registered ECE Modules **********");
         ArrayList<Module> eceModules = ece.getModules();
         for(Module m:eceModules){
-            System.out.println(m.getName());
+            System.out.println(m.getId() + " " + m.getName());
         }
         
         //print students registered for CS&IT
@@ -88,7 +88,7 @@ public class Driver {
         System.out.println("\n*********** Registered ECE Modules **********");
         ArrayList<Module> csitModules = csit.getModules();
         for(Module m:csitModules){
-            System.out.println(m.getName());
+            System.out.println(m.getId() + " " + m.getName());
         }
     }
 }
