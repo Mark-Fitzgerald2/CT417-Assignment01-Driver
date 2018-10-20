@@ -10,4 +10,17 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    <repositories>
+	<repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+	</repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.Mark-Fitzgerald2</groupId>
+            <artifactId>CT417-Assignment01</artifactId>
+            <version>d2e49c9236faf83fe923fb37e89485dadaf5210a</version>
+        </dependency>
+    </dependencies>
 </project>
