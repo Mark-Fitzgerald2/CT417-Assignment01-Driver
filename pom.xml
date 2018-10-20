@@ -20,7 +20,7 @@
         <dependency>
             <groupId>com.github.Mark-Fitzgerald2</groupId>
             <artifactId>CT417-Assignment01</artifactId>
-            <version>d2e49c9236faf83fe923fb37e89485dadaf5210a</version>
+            <version>df301d42cf4f4ab002191d1e2e33a8e2dae1701b</version>
         </dependency>
     </dependencies>
 </project>
