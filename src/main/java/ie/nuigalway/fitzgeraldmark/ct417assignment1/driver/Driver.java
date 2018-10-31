@@ -136,7 +136,7 @@ public class Driver {
                 System.out.println(s.getUsername());
             }
             System.out.println("\n********** Registered courses for module " + m.getId() + " " + m.getName() + " **********");
-            //print out every student assigned to that module
+            //print out every course that the module is assigned to
             for(Course c : moduleCourses) {
                 System.out.println(c.getName());
             }
@@ -163,12 +163,12 @@ public class Driver {
             studentModules = s.getModules();
             studentCourses = s.getCourses();
             System.out.println("\n********** Registered modules for student " + s.getName() + " **********");
-            //print out every student assigned to that module
+            //print out every module that the student is assigned to
             for(Module m : studentModules) {
                 System.out.println(m.getId() + " " + m.getName());
             }
             System.out.println("\n********** Registered courses for student " + s.getName() + " **********");
-            //print out every student assigned to that module
+            //print out every course that the student is assigned to
             for(Course c : studentCourses) {
                 System.out.println(c.getName());
             }
